@@ -16,6 +16,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: #fff;
+  min-height: 2000px;
 }
 
 /* navbar */
@@ -48,7 +49,7 @@ body {
 .navbar .navbar-nav a {
   color: #fff;
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin: 0 1rem;
 }
 
@@ -97,6 +98,13 @@ body {
   html {
     font-size: 62.5%;
   }
+
+  /* handphone mobile */
+  @media (max-width: 450px) {
+    html {
+      font-size: 55%;
+    }
+  }
   #hamburger-menu {
     display: inline-block;
   }
@@ -132,9 +140,16 @@ body {
   }
 }
 
-/* handphone mobile */
-@media (max-width: 450px) {
-  html {
-    font-size: 55%;
-  }
+/* hero section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/headerbg.jpg");
+  background-image: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
+
+/* hero after */
