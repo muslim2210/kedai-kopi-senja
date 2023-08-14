@@ -17,9 +17,18 @@ document.querySelector("#search-button").onclick = (e) => {
   e.preventDefault();
 };
 
+// toogle class active untuk shopping cart button
+const shoppingCart = document.querySelector(".shopping-cart");
+
+document.querySelector("#shopping-cart-button").onclick = (e) => {
+  shoppingCart.classList.toggle("active");
+  e.preventDefault();
+};
+
 // // klik diluar elemen
 const hmb = document.querySelector("#hamburger-menu");
 const sb = document.querySelector("#search-button");
+const spc = document.querySelector("#shopping-cart-button");
 
 document.addEventListener("click", function (e) {
   if (!hmb.contains(e.target) && !navbarNav.contains(e.target)) {
@@ -28,5 +37,9 @@ document.addEventListener("click", function (e) {
 
   if (!sb.contains(e.target) && !searchForm.contains(e.target)) {
     searchForm.classList.remove("active");
+  }
+
+  if (!spc.contains(e.target) && !shoppingCart.contains(e.target)) {
+    shoppingCart.classList.remove("active");
   }
 });
